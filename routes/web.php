@@ -70,3 +70,18 @@ Route::post('service/search', 'ServiceController@search')->name('service.search'
 Route::get('service/info/{id}', 'ServiceController@info')->name('service.info');
 Route::post('service/save/{id}', 'ServiceController@save')->name('service.save');
 Route::delete('service/delete/{id}', 'ServiceController@delete')->name('service.delete');
+
+Route::get('client', 'ClientController@index')->name('client');
+Route::post('client/search', 'ClientController@search')->name('client.search');
+Route::get('client/info/{id}', 'ClientController@info')->name('client.info');
+Route::post('client/save/{id}', 'ClientController@save')->name('client.save');
+Route::delete('client/delete/{id}', 'ClientController@delete')->name('client.delete');
+Route::get('client/review/{id}', 'ClientController@review')->name('client.review');
+Route::post('client/review/{id}/save', 'ClientController@review_save')->name('client.review.save');
+Route::delete('client/review/{id}/delete', 'ClientController@review_delete')->name('client.review.delete');
+
+Route::get('partner', 'PartnerController@index')->name('partner');
+Route::post('partner/search', 'PartnerController@search')->name('partner.search');
+Route::get('partner/info/{id}', 'PartnerController@info')->name('partner.info');
+Route::post('partner/save/{id}', 'PartnerController@save')->name('partner.save');
+Route::delete('partner/delete/{id}', 'PartnerController@delete')->name('partner.delete');

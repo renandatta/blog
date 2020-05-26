@@ -9,7 +9,7 @@ class Partner extends Model
 {
     use SoftDeletes;
     protected $fillable = [
-        'name', 'description', 'city', 'address',
+        'name', 'description', 'city', 'address', 'media_id',
     ];
 
     public function media()

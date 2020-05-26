@@ -1,6 +1,6 @@
 <div class="row">
     @foreach ($data as $key => $value)
-        <div class="col-md-2">
+        <div class="col-md-2 mb-3">
             <div class="card" style="height: 100%;">
                 <div class="card-header">
                     <h6 class="mb-0 mt-0">{{ $value->name }}</h6>

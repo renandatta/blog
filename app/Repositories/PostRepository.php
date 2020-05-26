@@ -51,11 +51,13 @@ class PostRepository {
 
     public function store($request)
     {
+        $request = $this->filterRequest($request);
         return $this->post->create($request->all());
     }
 
     public function update($request, $id)
     {
+        $request = $this->filterRequest($request);
         $post = $this->post->find($id);
         $post->update($request->all());
         return $post;

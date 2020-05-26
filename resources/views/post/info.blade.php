@@ -6,6 +6,10 @@
 
 @extends('layouts.main')
 
+@section('title')
+    {{ $title }} -
+@endsection
+
 @section('content')
     <div class="az-content-header d-block d-md-flex">
         <div>

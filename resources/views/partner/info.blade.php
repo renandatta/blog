@@ -24,26 +24,21 @@
     <div class="az-content-body border-top">
         <div class="row mt-3">
             <div class="col-md-6">
-                <a href="{{ route('user') }}" class="btn btn-light">Cancel</a>
+                <a href="{{ route('partner') }}" class="btn btn-light">Cancel</a>
             </div>
             <div class="col-md-6 text-right">
                 @if ($id != 'new')
-                    <button type="button" onclick="deleteUser('{{ $id }}')" class="btn btn-danger"><i class="la la-times text-white"></i> Delete</button>
+                    <button type="button" onclick="deletePartner('{{ $id }}')" class="btn btn-danger"><i class="la la-times text-white"></i> Delete</button>
                 @endif
             </div>
         </div>
         <div class="card mt-3">
             <div class="card-body">
-                @php($prefix = 'formUser')
-                <form action="{{ route('user.save', $id) }}" method="post" id="{{ $prefix }}">
+                @php($prefix = 'formPartner')
+                <form action="{{ route('partner.save', $id) }}" method="post" id="{{ $prefix }}" enctype="multipart/form-data">
                     @csrf
-                    <div class="row">
-                        <div class="col-md-6">
-                            <h4># User Information</h4>
-                            @include('user._form', compact('user', 'userLevels'))
-                        </div>
-                    </div>
-                    <button type="submit" class="btn btn-primary" id="buttonSave">Save User</button>
+                    @include('partner._form', compact('partner'))
+                    <button type="submit" class="btn btn-primary" id="buttonSave">Save Partner</button>
                 </form>
             </div>
         </div>
@@ -52,7 +47,7 @@
 
 @push('scripts')
     <script>
-        function deleteUser(id) {
+        function deletePartner(id) {
             Swal.fire({
                 text: "Delete data?",
                 icon: 'warning',
@@ -60,11 +55,13 @@
                 confirmButtonText: 'Hapus!'
             }).then((result) => {
                 if (result.value) {
-                    $.post('{{ url('user/delete') }}/' + id, {_token: '{{ csrf_token() }}', _method: 'delete'}, function () {
-                        window.location.href = "{{ route('user') }}";
+                    $.post('{{ url('partner/delete') }}/' + id, {_token: '{{ csrf_token() }}', _method: 'delete'}, function () {
+                        window.location.href = "{{ route('partner') }}";
                     });
                 }
             });
         }
     </script>
 @endpush
+
+@include('_tools.media')

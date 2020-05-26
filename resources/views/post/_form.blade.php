@@ -27,7 +27,7 @@
                 <img src="{{ $default }}" alt="" id="{{ $prefix }}mediaPreview" class="img-fluid" style="width: 100%;">
             </div>
         </div>
-        <input type="hidden" name="media_id" id="{{ $prefix }}media_id">
+        <input type="hidden" name="media_id" id="{{ $prefix }}media_id" value="{{ !empty($post) ? $post->media_id : '' }}">
         <a href="javascript:void(0)" class="btn btn-block btn-primary btn-sm mb-3" onclick="selectMedia('#{{ $prefix }}media_id', '#{{ $prefix }}mediaPreview')">Select Image</a>
 
         @include('_tools.form', [

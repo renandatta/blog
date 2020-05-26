@@ -9,6 +9,11 @@ class Service extends Model
 {
     use SoftDeletes;
     protected $fillable = [
-        'name', 'description'
+        'name', 'description', 'media_id'
     ];
+
+    public function media()
+    {
+        return $this->belongsTo(Media::class);
+    }
 }
