@@ -85,3 +85,23 @@ Route::post('partner/search', 'PartnerController@search')->name('partner.search'
 Route::get('partner/info/{id}', 'PartnerController@info')->name('partner.info');
 Route::post('partner/save/{id}', 'PartnerController@save')->name('partner.save');
 Route::delete('partner/delete/{id}', 'PartnerController@delete')->name('partner.delete');
+
+Route::get('slider', 'SliderController@index')->name('slider');
+Route::post('slider/search', 'SliderController@search')->name('slider.search');
+Route::get('slider/info/{id}', 'SliderController@info')->name('slider.info');
+Route::post('slider/save/{id}', 'SliderController@save')->name('slider.save');
+Route::delete('slider/delete/{id}', 'SliderController@delete')->name('slider.delete');
+
+Route::get('content', 'ContentController@index')->name('content');
+Route::post('content/search', 'ContentController@search')->name('content.search');
+Route::get('content/info/{id}', 'ContentController@info')->name('content.info');
+Route::post('content/save/{id}', 'ContentController@save')->name('content.save');
+Route::delete('content/delete/{id}', 'ContentController@delete')->name('content.delete');
+
+Route::get('featured_post', 'FeaturedPostController@index')->name('featured_post');
+Route::post('featured_post/search', 'FeaturedPostController@search')->name('featured_post.search');
+Route::get('featured_post/info/{id}', 'FeaturedPostController@info')->name('featured_post.info');
+Route::post('featured_post/save/{id}', 'FeaturedPostController@save')->name('featured_post.save');
+Route::delete('featured_post/delete/{id}', 'FeaturedPostController@delete')->name('featured_post.delete');
+Route::post('featured_post/detail/save', 'FeaturedPostController@detail_save')->name('featured_post.detail.save');
+Route::delete('featured_post/detail/delete', 'FeaturedPostController@detail_delete')->name('featured_post.detail.delete');

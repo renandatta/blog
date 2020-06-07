@@ -10,9 +10,7 @@ use Illuminate\Support\Facades\Session;
 class ServiceController extends Controller
 {
     private $serviceRepository;
-
     private $breadcrumbs;
-
     public function __construct(ServiceRepository $serviceRepository)
     {
         $this->middleware('auth');

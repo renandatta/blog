@@ -24,7 +24,11 @@
             <td>{{ format_date($value->date_published) }}</td>
             <td>{{ $value->user->name }}</td>
             <td class="text-center p-2">
-                <a href="{{ route('post.info', [$value->id]) }}"><i class="typcn typcn-pencil" style="font-size: 0.8125rem;"></i> Edit</a>
+                @if($action == null)
+                    <a href="{{ route('post.info', [$value->id]) }}"><i class="typcn typcn-pencil" style="font-size: 0.8125rem;"></i> Edit</a>
+                @else
+                    <a href="javascript:void(0)" onclick="{{ $action }}({{ $value->id }})">{{ $action_caption }}</a>
+                @endif
             </td>
         </tr>
     @endforeach

@@ -50,7 +50,9 @@ class PostController extends Controller
             'date_published_start' => $request->input('date_published_start'),
             'date_published_end' => $request->input('date_published_end'),
         ], $pagination);
-        return $request->has('ajax') ? $data : view('post._table', compact('data'))->render();
+        $action = $request->has('action') ? $request->input('action') : null;
+        $action_caption = $request->has('action_caption') ? $request->input('action_caption') : null;
+        return $request->has('ajax') ? $data : view('post._table', compact('data', 'action', 'action_caption'))->render();
     }
 
     public function info($id)
