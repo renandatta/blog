@@ -9,7 +9,7 @@ class Slider extends Model
 {
     use SoftDeletes;
     protected $fillable = [
-        'name'
+        'name', 'media_id'
     ];
 
     public function media()

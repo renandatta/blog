@@ -28,6 +28,7 @@ class CreateSettingsTable extends Migration
             $table->smallInteger('flag_partner')->default(0);
             $table->smallInteger('flag_post_comment')->default(0);
             $table->timestamps();
+            $table->softDeletes('deleted_at', 0);
         });
     }
 

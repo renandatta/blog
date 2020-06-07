@@ -25,6 +25,9 @@ class CreatePostsTable extends Migration
             $table->longText('content');
             $table->text('meta_tags')->nullable();
             $table->string('meta_description')->nullable();
+            $table->integer('view_count')->default(0);
+            $table->integer('vote_count')->default(0);
+            $table->integer('share_count')->default(0);
             $table->timestamps();
             $table->softDeletes('deleted_at', 0);
 

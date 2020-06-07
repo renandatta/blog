@@ -8,7 +8,7 @@ class Setting extends Model
 {
     protected $fillable = [
         'title', 'meta_tags', 'meta_description', 'flag_slider', 'flag_service', 'flag_client', 'flag_client_review',
-        'flag_partner', 'flag_post_comment',
+        'flag_partner', 'flag_post_comment', 'favicon', 'logo', 'banner'
     ];
 
     public function favicon_image()
