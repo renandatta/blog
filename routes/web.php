@@ -16,9 +16,18 @@ Route::get('storage/{folder}/{filename}', function ($folder,$filename){
     return $response;
 });
 
-Route::get('/', function () {
-    return redirect('dashboard');
-});
+//------------------------------ home area ---------------------------------------------------
+
+Route::get('/', 'HomeController@index')->name('/');
+Route::get('category/{slug}', 'HomeController@category')->name('category');
+Route::get('recent_news', 'HomeController@recent_news')->name('recent_news');
+Route::get('post/{slug}', 'HomeController@post')->name('home.post');
+Route::post('search', 'HomeController@search_post')->name('search');
+Route::get('search/{keyword}', 'HomeController@search')->name('home.search');
+
+Route::post('vote_count/{slug}', 'HomeController@vote_count')->name('vote_count');
+
+//------------------------------ admin area ---------------------------------------------------
 
 Route::get('login', 'AuthController@login')->name('login');
 Route::post('login', 'AuthController@login_process')->name('login.process');

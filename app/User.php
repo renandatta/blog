@@ -12,7 +12,7 @@ class User extends Authenticatable
     use Notifiable;
     use SoftDeletes;
     protected $fillable = [
-        'name', 'email', 'password', 'user_level_id'
+        'name', 'email', 'password', 'user_level_id', 'media_id'
     ];
 
     protected $hidden = [
@@ -26,5 +26,10 @@ class User extends Authenticatable
     public function user_level()
     {
         return $this->belongsTo(UserLevel::class);
+    }
+
+    public function media()
+    {
+        return $this->belongsTo(Media::class);
     }
 }

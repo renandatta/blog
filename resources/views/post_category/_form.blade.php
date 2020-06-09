@@ -20,7 +20,7 @@
     </div>
     <div class="col-md-6">
         <div class="row mt-4">
-            <div class="col-md-3">
+            <div class="col-md-6">
                 <h4>&nbsp;</h4>
                 @php($default = (!empty($postCategory) && !empty($postCategory->media)) ? asset('storage/' . $postCategory->media->location) : asset('img/default.png'))
                 <div class="card">

@@ -37,12 +37,7 @@
                 @php($prefix = 'formUser')
                 <form action="{{ route('user.save', $id) }}" method="post" id="{{ $prefix }}">
                     @csrf
-                    <div class="row">
-                        <div class="col-md-6">
-                            <h4># User Information</h4>
-                            @include('user._form', compact('user', 'userLevels'))
-                        </div>
-                    </div>
+                    @include('user._form', compact('user', 'userLevels'))
                     <button type="submit" class="btn btn-primary" id="buttonSave">Save User</button>
                 </form>
             </div>
@@ -68,3 +63,5 @@
         }
     </script>
 @endpush
+
+@include('_tools.media')

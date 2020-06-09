@@ -1,6 +1,7 @@
 <table class="table table-bordered table-striped">
     <thead>
     <tr>
+        <th>Image</th>
         <th>Name</th>
         <th>Email</th>
         <th>User Level</th>
@@ -10,6 +11,11 @@
     <tbody>
     @foreach ($data as $key => $value)
         <tr>
+            <td class="p-0 text-center">
+                @if (!empty($value->media))
+                    <img src="{{ asset('storage/' . $value->media->location) }}" alt="" class="img-fluid" style="height: 40px">
+                @endif
+            </td>
             <td>{{ $value->name }}</td>
             <td>{{ $value->email }}</td>
             <td>{{ $value->user_level->name }}</td>

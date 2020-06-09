@@ -21,7 +21,7 @@
             <td>{{ $value->title }}</td>
             <td>{{ $value->post_category->name }}</td>
             <td>{{ $value->tags }}</td>
-            <td>{{ format_date($value->date_published) }}</td>
+            <td class="text-nowrap">{{ format_date($value->date_published) }}</td>
             <td>{{ $value->user->name }}</td>
             <td class="text-center p-2">
                 @if($action == null)

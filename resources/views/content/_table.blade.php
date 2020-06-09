@@ -11,9 +11,9 @@
     @foreach ($data as $key => $value)
         <tr>
             <td class="text-nowrap">{{ $value->name }}</td>
-            <td class="text-nowrap">{{ $value->title }}</td>
-            <td class="text-nowrap">{{ $value->content }}</td>
-            <td class="text-center p-2">
+            <td>{{ $value->title }}</td>
+            <td>{{ $value->content }}</td>
+            <td class="text-center p-2 text-nowrap">
                 <a href="{{ route('content.info', [$value->id]) }}"><i class="typcn typcn-pencil" style="font-size: 0.8125rem;"></i> Edit</a>
             </td>
         </tr>

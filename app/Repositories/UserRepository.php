@@ -4,6 +4,7 @@ namespace App\Repositories;
 
 use App\Module;
 use App\User;
+use Illuminate\Support\Facades\Hash;
 
 class UserRepository {
 
@@ -35,13 +36,16 @@ class UserRepository {
 
     public function store($request)
     {
+        $request = $request->input('password') != '' ? $request->merge(['password' => Hash::make($request->input('password'))]) : $request;
         return $this->user->create($request->all());
     }
 
     public function update($request, $id)
     {
         $user = $this->user->find($id);
-        $user->update($request->all());
+        $request = $request->input('password') != '' ? $request->merge(['password' => Hash::make($request->input('password'))]) : $request;
+        $user = ($request->input('password') == '') ? $user->update($request->except('password')) : $user->update($request->all());
+
         return $user;
     }
 
