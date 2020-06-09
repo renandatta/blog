@@ -24,7 +24,7 @@
                                     <!-- Thumbnail -->
                                     <div class="thumbnail-1">
                                         <span class="bg-orange">{{ $item->post_category->name }}</span>
-                                        <a href="#">
+                                        <a href="{{ route('home.post', $item->slug) }}">
                                             <img src="{{ asset('storage/' . $item->media->location) }}" alt="Zona Korea">
                                         </a>
                                     </div>
@@ -37,7 +37,7 @@
                                         <!-- /.line -->
                                         <!-- Title -->
                                         <div class="title">
-                                            <a href="#">
+                                            <a href="{{ route('home.post', $item->slug) }}">
                                                 <h2>{{ $item->title }}</h2>
                                             </a>
                                         </div>
