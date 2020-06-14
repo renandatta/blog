@@ -33,9 +33,187 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c860326-be56-47ed-bc71-23933f36414e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/zonakorea.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sumowarna.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/animate.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/nprogress.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/owl.carousel.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/owl.theme.default.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/owl.video.play.png.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/swiper.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/fontawesome/font-awesome.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/fontawesome/fontawesome-webfont-.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/fontawesome/fontawesome-webfont-v=4.7.0.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/fontawesome/fontawesome-webfont-v=4.7.0.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/fontawesome/fontawesome-webfont-v=4.7.0.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/fontawesome/fontawesome-webfont-v=4.7.0.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/fontawesome/fontawesome-webfont-v=4.7.0.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/poppins/Poppins-Bold-.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/poppins/Poppins-Bold.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/poppins/Poppins-Bold.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/poppins/Poppins-Bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/poppins/Poppins-Bold.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/poppins/Poppins-Bold.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/poppins/Poppins-Medium-.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/poppins/Poppins-Medium.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/poppins/Poppins-Medium.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/poppins/Poppins-Medium.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/poppins/Poppins-Medium.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/poppins/Poppins-Medium.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/poppins/Poppins-Regular-.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/poppins/Poppins-Regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/poppins/Poppins-Regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/poppins/Poppins-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/poppins/Poppins-Regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/poppins/Poppins-Regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/roboto/Roboto-Light-.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/roboto/Roboto-Light.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/roboto/Roboto-Light.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/roboto/Roboto-Light.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/roboto/Roboto-Light.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/roboto/Roboto-Light.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/roboto/Roboto-Medium-.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/roboto/Roboto-Medium.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/roboto/Roboto-Medium.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/roboto/Roboto-Medium.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/roboto/Roboto-Medium.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/roboto/Roboto-Medium.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/roboto/Roboto-Regular-.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/roboto/Roboto-Regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/roboto/Roboto-Regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/roboto/Roboto-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/roboto/Roboto-Regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/roboto/Roboto-Regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/ads_01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/ads_02.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/ads_03.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/ads_04.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/ads_05.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/ads_06.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/background-megamenu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/background-testimonial.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/breadcrumb-01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/favicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/favicon/android-chrome-192x192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/favicon/android-chrome-512x512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/favicon/apple-touch-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/favicon/favicon-16x16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/favicon/favicon-32x32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/favicon/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/favicon/favicon_io.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/favicon/site.webmanifest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/footer_logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/iklan.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/instagram_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/instagram_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/instagram_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/instagram_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/instagram_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/instagram_6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/list_user1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/list_user2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/list_user3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/list_user4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/list_user5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/logo-01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/logo-zonakorea.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/profile_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/profile_10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/profile_11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/profile_12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/profile_13.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/profile_14.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/profile_15.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/profile_16.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/profile_17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/profile_18.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/profile_19.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/profile_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/profile_20.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/profile_21.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/profile_22.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/profile_23.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/profile_24.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/profile_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/profile_4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/profile_5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/profile_6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/profile_7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/profile_8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/profile_9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/slider1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/svg/050-magnifying-glass.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/svg/161-alarm.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/svg/more-1.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/svg/power-button-symbol.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/thumbnail/img-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/thumbnail/img-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/thumbnail/img-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/thumbnail/img-4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/thumbnail/park-seo-joon-itaewon-class-1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/thumbnail/profile.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/thumbnail_01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/thumbnail_02.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/thumbnail_03.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/thumbnail_04.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/thumbnail_05.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/thumbnail_06.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/thumbnail_07.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/thumbnail_08.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/thumbnail_09.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/thumbnail_10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/thumbnail_11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/thumbnail_12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/thumbnail_13.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/thumbnail_14.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/thumbnail_15.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/thumbnail_16.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/thumbnail_17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/thumbnail_18.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/thumbnail_19.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/thumbnail_20.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/thumbnail_21.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/thumbnail_22.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/thumbnail_27.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/thumbnail_28.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/thumbnail_29.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/thumbnail_30.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/thumbnail_31.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/thumbnail_32.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/thumbnail_33.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/thumbnail_34.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/thumbnail_35.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/thumbnail_36.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/thumbnail_37.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/thumbnail_38.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/thumbnail_39.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/thumbnail_40.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/thumbnail_41.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/thumbnail_42.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/thumbnail_43.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/thumbnail_44.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/thumbnail_45.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/tweet-img2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/user1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/user_notification1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/user_notification2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/user_notification3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/zk.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/js/easy-waypoint-animate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/js/jquery.countup.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/js/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/js/jquery.newsTicker.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/js/jquery.waypoints.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/js/nprogress.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/js/owl.carousel.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/js/scripts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/js/swiper.min.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -153,6 +331,9 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1d5yTae59cfr5PPl8dgDBucmyRv" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -162,7 +343,19 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/img" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\xampp\htdocs\sumowarna\public\img" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -182,6 +375,8 @@
       <updated>1591729256911</updated>
       <workItem from="1591729260033" duration="367000" />
       <workItem from="1591898577057" duration="104000" />
+      <workItem from="1592034253919" duration="10964000" />
+      <workItem from="1592066094625" duration="65000" />
     </task>
     <servers />
   </component>
@@ -201,9 +396,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="305" y="84" width="670" height="676" key="search.everywhere.popup" timestamp="1591898655801">
-      <screen x="0" y="23" width="1280" height="737" />
+    <state x="458" y="87" width="1005" height="964" key="search.everywhere.popup" timestamp="1592060769072">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
+    <state x="458" y="87" width="1005" height="964" key="search.everywhere.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1592060769072" />
     <state x="305" y="84" width="670" height="676" key="search.everywhere.popup/0.23.1280.737@0.23.1280.737" timestamp="1591898655801" />
   </component>
 </project>
