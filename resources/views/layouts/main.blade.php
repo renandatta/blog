@@ -99,27 +99,29 @@
                 }
             @endphp
             @foreach ($modules as $module)
-                @if($module->parent_code == '#')
-                    @if($module->action != '#')
-                        <li class="nav-item @if(Session::get('menu_active') == $module->action) active show @endif">
-                            <a @if(Route::has($module->action)) href="{{ route($module->action) }}" @endif class="nav-link"><i class="{{ $module->icon }}"></i>{{ $module->name }}</a>
-                        </li>
-                    @else
-                        <li class="nav-item" id="menu{{ $module->id }}">
-                            <a href="javascript:void(0)" class="nav-link with-sub"><i class="la la-shield"></i>{{ $module->name }}</a>
-                            <nav class="nav-sub">
-                                @if(count($module->sub_modules) > 0)
-                                    @foreach($module->sub_modules as $subModule)
-                                        <a @if(Route::has($subModule->action)) href="{{ route($subModule->action) }}" @endif class="nav-sub-link @if(Session::get('menu_active') == $subModule->action) active show @endif">{{ $subModule->name }}</a>
-                                        @if(Session::get('menu_active') == $subModule->action)
-                                            <script>
-                                                document.getElementById('menu{{ $module->id }}').className += " active show";
-                                            </script>
-                                        @endif
-                                    @endforeach
-                                @endif
-                            </nav>
-                        </li>
+                @if(!empty($module))
+                    @if($module->parent_code == '#')
+                        @if($module->action != '#')
+                            <li class="nav-item @if(Session::get('menu_active') == $module->action) active show @endif">
+                                <a @if(Route::has($module->action)) href="{{ route($module->action) }}" @endif class="nav-link"><i class="{{ $module->icon }}"></i>{{ $module->name }}</a>
+                            </li>
+                        @else
+                            <li class="nav-item" id="menu{{ $module->id }}">
+                                <a href="javascript:void(0)" class="nav-link with-sub"><i class="la la-shield"></i>{{ $module->name }}</a>
+                                <nav class="nav-sub">
+                                    @if(count($module->sub_modules) > 0)
+                                        @foreach($module->sub_modules as $subModule)
+                                            <a @if(Route::has($subModule->action)) href="{{ route($subModule->action) }}" @endif class="nav-sub-link @if(Session::get('menu_active') == $subModule->action) active show @endif">{{ $subModule->name }}</a>
+                                            @if(Session::get('menu_active') == $subModule->action)
+                                                <script>
+                                                    document.getElementById('menu{{ $module->id }}').className += " active show";
+                                                </script>
+                                            @endif
+                                        @endforeach
+                                    @endif
+                                </nav>
+                            </li>
+                        @endif
                     @endif
                 @endif
             @endforeach

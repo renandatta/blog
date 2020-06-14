@@ -107,3 +107,9 @@ Route::post('featured_post/save/{id}', 'FeaturedPostController@save')->name('fea
 Route::delete('featured_post/delete/{id}', 'FeaturedPostController@delete')->name('featured_post.delete');
 Route::post('featured_post/detail/save', 'FeaturedPostController@detail_save')->name('featured_post.detail.save');
 Route::delete('featured_post/detail/delete', 'FeaturedPostController@detail_delete')->name('featured_post.detail.delete');
+
+Route::get('setting', 'SettingController@index')->name('setting');
+Route::post('setting/search', 'SettingController@search')->name('setting.search');
+Route::get('setting/info/{id}', 'SettingController@info')->name('setting.info');
+Route::post('setting/save/{id}', 'SettingController@save')->name('setting.save');
+Route::delete('setting/delete/{id}', 'SettingController@delete')->name('setting.delete');

@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="">
 
-    <title>{{ env('APP_NAME') }}</title>
+    <title>{{ $setting->title }}</title>
     <!-- Favicon Icon -->
-    <link rel="icon" href="{{ asset('img/favicon.png') }}" type="image/png" />
+    <link rel="icon" href="{{ asset('storage/' . $setting->favicon_image->location) }}" type="image/png" />
     <!-- Stylesheets -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}" />
@@ -22,7 +22,7 @@
         body, html {
             font-family: 'Montserrat', sans-serif !important;
         }
-        #services {
+        #download {
             background-color: #192B71;
         }
         #portfolio {
@@ -142,23 +142,23 @@
 
 <body class="st-green">
 <!-- Start Header Section -->
-<header class="st-site-header st-style1 st-sticky-header">
+<header class="st-site-header st-style1 st-sticky-header" id="home">
     <div class="st-main-header">
         <div class="container">
             <div class="st-main-header-in">
                 <div class="st-main-header-left">
-                    <a class="st-site-branding st-white-logo" href="{{ route('/') }}"><img src="{{ asset('img/logo.png') }}" alt="Sumowarna"></a>
-                    <a class="st-site-branding st-dark-logo" href="{{ route('/') }}"><img src="{{ asset('img/logo.png') }}" alt="Sumowarna"></a>
+                    <a class="st-site-branding st-white-logo" href="{{ route('/') }}"><img src="{{ asset('storage/' . $setting->logo_image->location) }}" alt="Sumowarna"></a>
+                    <a class="st-site-branding st-dark-logo" href="{{ route('/') }}"><img src="{{ asset('storage/' . $setting->logo_image->location) }}" alt="Sumowarna"></a>
                 </div>
                 <div class="st-main-header-right">
                     <div class="st-nav">
                         <ul class="st-nav-list st-onepage-nav">
                             <li><a href="#home" class="st-smooth-move">Home</a></li>
-                            <li><a href="#about" class="st-smooth-move">About</a></li>
-                            <li><a href="#services" class="st-smooth-move">Download</a></li>
+                            <li><a href="#download" class="st-smooth-move">Download</a></li>
+                            <li><a href="#news" class="st-smooth-move">News</a></li>
                             <li><a href="#portfolio" class="st-smooth-move">Gallery</a></li>
-                            <li><a href="#team" class="st-smooth-move">News</a></li>
-                            <li><a href="#price" class="st-smooth-move">Contact</a></li>
+                            <li><a href="#contact" class="st-smooth-move">Contact</a></li>
+                            <li><a href="#about" class="st-smooth-move">About</a></li>
                         </ul>
                     </div>
                 </div>
@@ -180,15 +180,15 @@
     <!-- Start Hero Seciton -->
     <div class="st-height-b40 st-height-lg-b50"></div>
     <div class="st-hero-wrap st-gray-bg">
-        <div class="banner" style="background: url('{{ asset('img/banner.png') }}') no-repeat center;background-size: cover;width: 100vw; height: 650px;">
-            <h1 class="text-banner">“To Colour <br>Wonderful Indonesia”</h1>
-            <h6 class="text-banner">PT. Sumo Warna Indonesia merupakan sebuah perusahaan manufaktur yang bergerak dalam bidang industri pembuatan cat (Pabrik Cat). Untuk saat ini kami memproduksi khusus cat tembok, eksterior maupun interior. Produk kami distribusikan secara nasional melalui penjualan langsung ataupun melalui kantor perwakilan berbagai daerah khususnya Indoensia bagian Timur dan beberapa agen yang ditunjuk di berbagai kota besar di Indonesia. </h6>
+        <div class="banner" style="background: url('{{ asset('storage/' . $setting->banner_image->location) }}') no-repeat center;background-size: cover;width: 100vw; height: 650px;">
+            <h1 class="text-banner">{!! !empty($welcome) ? $welcome->content : '' !!}</h1>
+            <h6 class="text-banner">{!! !empty($about) ? $about->content : '' !!}</h6>
         </div>
     </div>
     <!-- End Hero Seciton -->
 
     <!-- Start Service Section -->
-    <section id="services">
+    <section id="download">
         <div class="st-height-b50 st-height-lg-b50"></div>
         <div class="container">
             <div class="st-section-heading st-style1">
@@ -200,27 +200,15 @@
         <div class="container">
             <div class="st-slider st-style2">
                 <div class="row justify-content-center">
+                    @foreach($products as $product)
                     <div class="col-md-4 col-sm-6 col-12 text-center mb-5">
-                        <img src="{{ asset('img/produk_2.png') }}" class="img-fluid" alt="">
-                        <h4 class="text-white mt-4">Sumotex Exterior</h4>
-                        <p class="text-white" style="min-height: 140px">Sumotex Cat Tembok Exterior merupakan inovasi terbaik dikelasnya dengan kualitas tinggi yang memberikan perlindungan maksimal pada dinding luar hunian anda terhadap jamur, lumut, serta cuaca eksrim.</p>
+                        <img src="{{ asset('storage/' . $product->media->location) }}" class="img-fluid" alt="">
+                        <h4 class="text-white mt-4">{{ $product->title }}</h4>
+                        <p class="text-white" style="min-height: 140px">{{ strip_tags($product->content) }}</p>
                         <br>
                         <a href="#" class="btn btn-primary">Detail Produk</a>
                     </div>
-                    <div class="col-md-4 col-sm-6 col-12 text-center mb-5">
-                        <img src="{{ asset('img/produk_3.png') }}" class="img-fluid" alt="">
-                        <h4 class="text-white mt-4">Sumotex Interior</h4>
-                        <p class="text-white" style="min-height: 140px">Sumotex Cat Tembok Interior merupakan inovasi dan teknologi terbaik dikelasnya dengan sentuhan warna warna cerah yang memberikan keindahan serta kenyamanan pada dekorasi hunian anda.</p>
-                        <br>
-                        <a href="#" class="btn btn-primary">Detail Produk</a>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-12 text-center mb-5">
-                        <img src="{{ asset('img/produk_1.png') }}" class="img-fluid" alt="">
-                        <h4 class="text-white mt-4">Sumo Anti Mos</h4>
-                        <p class="text-white" style="min-height: 140px">Anti Mos merupakn teknologi baru cat anti nyamuk dengan ekstrak alami dari bunga matahari, mampu mengusir hingga nyamuk mati,</p>
-                        <br>
-                        <a href="#" class="btn btn-primary">Detail Produk</a>
-                    </div>
+                    @endforeach
                 </div>
             </div><!-- .st-slider -->
         </div><!-- .container -->
@@ -235,26 +223,13 @@
             <div class="st-slider st-style2 st-pricing-wrap">
                 <div class="slick-container" data-autoplay="0" data-loop="1" data-speed="600" data-center="0"  data-slides-per-view="responsive" data-xs-slides="1" data-sm-slides="2" data-md-slides="3" data-lg-slides="4" data-add-slides="5">
                     <div class="slick-wrapper">
+                        @foreach($partner as $item)
                         <div class="slick-slide-in">
                             <div class="st-logo-carousel st-style1">
-                                <img src="{{ asset('img/depo.png') }}" alt="client1">
+                                <img src="{{ asset('storage/' . $item->media->location) }}" alt="client{{ $item->id }}">
                             </div>
                         </div><!-- .slick-slide-in -->
-                        <div class="slick-slide-in">
-                            <div class="st-logo-carousel st-style1">
-                                <img src="{{ asset('img/gne.png') }}" alt="client2">
-                            </div>
-                        </div><!-- .slick-slide-in -->
-                        <div class="slick-slide-in">
-                            <div class="st-logo-carousel st-style1">
-                                <img src="{{ asset('img/castwell.png') }}" alt="client3">
-                            </div>
-                        </div><!-- .slick-slide-in -->
-                        <div class="slick-slide-in">
-                            <div class="st-logo-carousel st-style1">
-                                <img src="{{ asset('img/relyon.png') }}" alt="client4">
-                            </div>
-                        </div><!-- .slick-slide-in -->
+                        @endforeach
                     </div>
                 </div><!-- .slick-container -->
                 <div class="pagination st-style1 st-flex st-hidden"></div> <!-- If dont need Pagination then add class .st-hidden -->
@@ -269,16 +244,18 @@
     <!-- End Logo Carousel -->
 
     <!-- Start Skill Section -->
-    <section>
+    <section id="news">
         <div class="st-height-b20 st-height-lg-b20"></div>
         <div class="container">
+            @foreach($news as $key => $item)
             <div class="row">
+                @if((($key+1) % 2) == 1)
                 <div class="col-lg-6 wow fadeInLeft" data-wow-duration="0.8s" data-wow-delay="0.2s">
                     <div class="st-slider st-style1">
                         <div class="slick-container" data-autoplay="0" data-loop="1" data-speed="800" data-autoplay-timeout="1000" data-center="0" data-slides-per-view="1">
                             <div class="slick-wrapper">
                                 <div class="slick-slide-in">
-                                    <div class="st-gallery-img st-style1 st-dynamic-bg" data-src="assets/img/skill-img.jpg"></div>
+                                    <div class="st-gallery-img st-style1 st-dynamic-bg" data-src="{{ asset('storage/' . $item->media->location) }}"></div>
                                 </div>
                             </div>
                         </div><!-- .slick-container -->
@@ -290,16 +267,17 @@
                     </div><!-- .st-slider -->
                     <div class="st-height-b0 st-height-lg-b20"></div>
                 </div><!-- .col -->
+                @endif
                 <div class="col-lg-6">
                     <div class="st-vertical-middle">
                         <div class="st-vertical-middle-in">
                             <div class="st-skill-wrap">
                                 <div class="st-skill-heading">
-                                    <h2 class="st-skill-title">Cat Terbaik Tahun 2020</h2>
+                                    <h2 class="st-skill-title">{{ $item->title }}</h2>
                                     <br>
                                     <br>
-                                    <h6>20 Mei 2020 | Berita</h6>
-                                    <div class="st-skill-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                                    <h6>{{ fulldate($item->published_date) }}</h6>
+                                    <div class="st-skill-subtitle">{{ strip_tags($item->content) }}</div>
                                     <br>
                                     <a href=""><b><u>Baca Selengkapnya</u></b></a>
                                     <div class="st-height-b20 st-height-lg-b20"></div>
@@ -308,49 +286,32 @@
                         </div>
                     </div>
                 </div><!-- .col -->
+                    @if((($key+1) % 2) == 0)
+                        <div class="col-lg-6 wow fadeInLeft" data-wow-duration="0.8s" data-wow-delay="0.2s">
+                            <div class="st-slider st-style1">
+                                <div class="slick-container" data-autoplay="0" data-loop="1" data-speed="800" data-autoplay-timeout="1000" data-center="0" data-slides-per-view="1">
+                                    <div class="slick-wrapper">
+                                        <div class="slick-slide-in">
+                                            <div class="st-gallery-img st-style1 st-dynamic-bg" data-src="{{ asset('storage/' . $item->media->location) }}"></div>
+                                        </div>
+                                    </div>
+                                </div><!-- .slick-container -->
+                                <div class="pagination st-style2"></div> <!-- If dont need Pagination then add class .st-hidden -->
+                                <div class="swipe-arrow st-style1 st-hidden"> <!-- If dont need navigation then add class .st-hidden -->
+                                    <div class="slick-arrow-left"><i class="fa fa-angle-left"></i></div>
+                                    <div class="slick-arrow-right"><i class="fa fa-angle-right"></i></div>
+                                </div>
+                            </div><!-- .st-slider -->
+                            <div class="st-height-b0 st-height-lg-b20"></div>
+                        </div><!-- .col -->
+                    @endif
             </div>
             <div class="row">
                 <div class="col-12">
                     <div class="st-height-b30 st-height-lg-b30"></div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="st-vertical-middle">
-                        <div class="st-vertical-middle-in">
-                            <div class="st-skill-wrap">
-                                <div class="st-skill-heading">
-                                    <h2 class="st-skill-title">Cat Terbaik Tahun 2021</h2>
-                                    <br>
-                                    <br>
-                                    <h6>20 Mei 2020 | Berita</h6>
-                                    <div class="st-skill-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-                                    <br>
-                                    <a href=""><b><u>Baca Selengkapnya</u></b></a>
-                                    <div class="st-height-b20 st-height-lg-b20"></div>
-                                </div><!-- .st-skill-heading -->
-                            </div>
-                        </div>
-                    </div>
-                </div><!-- .col -->
-                <div class="col-lg-6 wow fadeInLeft" data-wow-duration="0.8s" data-wow-delay="0.2s">
-                    <div class="st-slider st-style1">
-                        <div class="slick-container" data-autoplay="0" data-loop="1" data-speed="800" data-autoplay-timeout="1000" data-center="0" data-slides-per-view="1">
-                            <div class="slick-wrapper">
-                                <div class="slick-slide-in">
-                                    <div class="st-gallery-img st-style1 st-dynamic-bg" data-src="assets/img/skill-img.jpg"></div>
-                                </div>
-                            </div>
-                        </div><!-- .slick-container -->
-                        <div class="pagination st-style2"></div> <!-- If dont need Pagination then add class .st-hidden -->
-                        <div class="swipe-arrow st-style1 st-hidden"> <!-- If dont need navigation then add class .st-hidden -->
-                            <div class="slick-arrow-left"><i class="fa fa-angle-left"></i></div>
-                            <div class="slick-arrow-right"><i class="fa fa-angle-right"></i></div>
-                        </div>
-                    </div><!-- .st-slider -->
-                    <div class="st-height-b0 st-height-lg-b20"></div>
-                </div><!-- .col -->
-            </div>
+            @endforeach
         </div>
         <div class="st-height-b50 st-height-lg-b50"></div>
     </section>
@@ -372,54 +333,21 @@
                 <div class="st-isotop-filter st-style1 text-center">
                     <ul class="st-mp0">
                         <li class="active mb-3"><a href="#" data-filter="*">Semua</a></li>
-                        <li class="mb-3"><a href="#" data-filter=".external">External</a></li>
-                        <li class="mb-3"><a href="#" data-filter=".internal">Internal</a></li>
-                        <li class="mb-3"><a href="#" data-filter=".anti-mos">Anti Mos</a></li>
+                        @foreach($tags as $tag)
+                        <li class="mb-3"><a href="#" data-filter=".{{ $tag }}">{{ ucwords($tag) }}</a></li>
+                        @endforeach
                     </ul>
                 </div>
                 <div class="st-isotop st-style1 st-port-col-3 st-has-gutter st-lightgallery">
                     <div class="st-grid-sizer"></div>
-                    <div class="st-isotop-item external">
-                        <a href="{{ asset('img/galeri_1.png') }}" class="st-project st-zoom st-lightbox-item">
-                            <div class="st-project-img st-zoom-in"><img src="{{ asset('img/galeri_1.png') }}" alt="project1"></div>
+                    @foreach($gallery as $item)
+                    <div class="st-isotop-item {{ $item->tags }}">
+                        <a href="{{ asset('storage/' . $item->media->location) }}" class="st-project st-zoom st-lightbox-item">
+                            <div class="st-project-img st-zoom-in"><img src="{{ asset('storage/' . $item->media->location) }}" alt="project1"></div>
                             <div class="st-plus"><span></span></div>
                         </a>
                     </div><!-- .st-isotop-item -->
-
-                    <div class="st-isotop-item external">
-                        <a href="{{ asset('img/galeri_2.png') }}" class="st-project st-zoom st-lightbox-item">
-                            <div class="st-project-img st-zoom-in"><img src="{{ asset('img/galeri_2.png') }}" alt="project1"></div>
-                            <div class="st-plus"><span></span></div>
-                        </a>
-                    </div><!-- .st-isotop-item -->
-
-                    <div class="st-isotop-item external anti-mos">
-                        <a href="{{ asset('img/galeri_3.png') }}" class="st-project st-zoom st-lightbox-item">
-                            <div class="st-project-img st-zoom-in"><img src="{{ asset('img/galeri_3.png') }}" alt="project1"></div>
-                            <div class="st-plus"><span></span></div>
-                        </a>
-                    </div><!-- .st-isotop-item -->
-
-                    <div class="st-isotop-item internal ">
-                        <a href="{{ asset('img/galeri_4.png') }}" class="st-project st-zoom st-lightbox-item">
-                            <div class="st-project-img st-zoom-in"><img src="{{ asset('img/galeri_4.png') }}" alt="project1"></div>
-                            <div class="st-plus"><span></span></div>
-                        </a>
-                    </div><!-- .st-isotop-item -->
-
-                    <div class="st-isotop-item internal anti-mos">
-                        <a href="{{ asset('img/galeri_5.png') }}" class="st-project st-zoom st-lightbox-item">
-                            <div class="st-project-img st-zoom-in"><img src="{{ asset('img/galeri_5.png') }}" alt="project1"></div>
-                            <div class="st-plus"><span></span></div>
-                        </a>
-                    </div><!-- .st-isotop-item -->
-
-                    <div class="st-isotop-item internal anti-mos">
-                        <a href="{{ asset('img/galeri_6.png') }}" class="st-project st-zoom st-lightbox-item">
-                            <div class="st-project-img st-zoom-in"><img src="{{ asset('img/galeri_6.png') }}" alt="project1"></div>
-                            <div class="st-plus"><span></span></div>
-                        </a>
-                    </div><!-- .st-isotop-item -->
+                    @endforeach
                 </div><!-- .isotop -->
             </div>
         </div>
@@ -435,32 +363,32 @@
                 <div class="col-lg-3">
                     <div class="st-funfact st-style1">
                         <div class="st-funfact-icon wow bounce" data-wow-duration="1s" data-wow-delay="0.7s"><i class="flaticon-rate"></i></div>
-                        <h2 class="st-funfact-number st-counter">999</h2>
-                        <div class="st-funfact-title">Satisfied customers</div>
+                        <h2 class="st-funfact-number st-counter">{{ $satisfied_customer->content }}</h2>
+                        <div class="st-funfact-title">{{ $satisfied_customer->title }}</div>
                     </div>
                     <div class="st-height-b30 st-height-lg-b30"></div>
                 </div><!-- .col -->
                 <div class="col-lg-3">
                     <div class="st-funfact st-style1">
                         <div class="st-funfact-icon wow bounce" data-wow-duration="1s" data-wow-delay="0.9s"><i class="flaticon-code"></i></div>
-                        <h2 class="st-funfact-number st-counter">999</h2>
-                        <div class="st-funfact-title">Project Build</div>
+                        <h2 class="st-funfact-number st-counter">{{ $project_build->content }}</h2>
+                        <div class="st-funfact-title">{{ $project_build->title }}</div>
                     </div>
                     <div class="st-height-b30 st-height-lg-b30"></div>
                 </div><!-- .col -->
                 <div class="col-lg-3">
                     <div class="st-funfact st-style1">
                         <div class="st-funfact-icon wow bounce" data-wow-duration="1s" data-wow-delay="0.8s"><i class="flaticon-laptop"></i></div>
-                        <h2 class="st-funfact-number st-counter">100</h2>
-                        <div class="st-funfact-title">Experts Worker</div>
+                        <h2 class="st-funfact-number st-counter">{{ $experts_worker->content }}</h2>
+                        <div class="st-funfact-title">{{ $experts_worker->title }}</div>
                     </div>
                     <div class="st-height-b30 st-height-lg-b30"></div>
                 </div><!-- .col -->
                 <div class="col-lg-3">
                     <div class="st-funfact st-style1">
                         <div class="st-funfact-icon wow bounce" data-wow-duration="1s" data-wow-delay="1s"><i class="flaticon-win"></i></div>
-                        <h2 class="st-funfact-number st-counter">20</h2>
-                        <div class="st-funfact-title">Experience Years</div>
+                        <h2 class="st-funfact-number st-counter">{{ $experience_years->content }}</h2>
+                        <div class="st-funfact-title">{{ $experience_years->title }}</div>
                     </div>
                     <div class="st-height-b30 st-height-lg-b30"></div>
                 </div><!-- .col -->
@@ -519,13 +447,10 @@
                     <div class="st-contact-info">
                         <h2 class="st-contact-info-title">Kantor Pusat</h2>
                         <ul class="st-contact-info-list st-mp0">
-                            <li><i class="fas fa-map-marker-alt"></i>Jl. Margomulyo Blok J No. 19,
-                                <br>Pergudangan Margomulyo Permai,
-                                <br>Surabaya, Jawa Timur - Indonesia
+                            <li><i class="fas fa-map-marker-alt"></i>{{ $alamat->content }}
                             </li>
-                            <li><i class="fas fa-phone-volume"></i>+60 16 996 1133</li>
-                            <li><i class="fas fa-phone-volume"></i>+60 16 996 1133</li>
-                            <li><i class="fas fa-envelope"></i><a href="#">contact@sumowarna.id</a></li>
+                            <li><i class="fas fa-phone-volume"></i>{{ $notelp->content }}</li>
+                            <li><i class="fas fa-envelope"></i><a href="#">{{ $email->content }}</a></li>
                         </ul>
                     </div>
                 </div>
@@ -539,15 +464,15 @@
 </div>
 
 <!-- Start Footer -->
-<footer class="st-site-footer st-sticky-footer">
+<footer class="st-site-footer st-sticky-footer" id="about">
     <div class="st-main-footer">
         <div class="container">
             <div class="row">
                 <div class="col-lg-3">
                     <div class="st-footer-widget">
                         <div class="st-text-field">
-                            <img src="{{ asset('img/logo.png') }}" alt="Sumowarna" class="st-white-logo">
-                            <img src="{{ asset('img/logo.png') }}" alt="Sumowarna" class="st-dark-logo">
+                            <img src="{{ asset('storage/' . $setting->logo_2_image->location) }}" alt="Sumowarna" class="st-white-logo">
+                            <img src="{{ asset('storage/' . $setting->logo_2_image->location) }}" alt="Sumowarna" class="st-dark-logo">
                             <div class="st-height-b25 st-height-lg-b25"></div>
                         </div>
                     </div>
@@ -555,7 +480,7 @@
                 <div class="col-lg-6">
                     <div class="st-footer-widget">
                         <h2 class="st-footer-widget-title">Tentang Kami</h2>
-                        <div class="st-footer-text">Lorem ipsum dolor sit consectetur adipisicing sed do eiusmod tempor incididunt ut labore. Lorem Ipsum is simply dummy.</div>
+                        <div class="st-footer-text">{{ $tentang->content }}</div>
                     </div>
                 </div><!-- .col -->
                 <div class="col-lg-3">
@@ -588,23 +513,6 @@
     </div>
 </footer>
 <!-- End Footer -->
-
-<!-- Start Video Popup -->
-<div class="st-video-popup">
-    <div class="st-video-popup-overlay"></div>
-    <div class="st-video-popup-content">
-        <div class="st-video-popup-layer"></div>
-        <div class="st-video-popup-container">
-            <div class="st-video-popup-align">
-                <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="about:blank"></iframe>
-                </div>
-            </div>
-            <div class="st-video-popup-close"></div>
-        </div>
-    </div>
-</div>
-<!-- End Video Popup -->
 
 <!-- Scripts -->
 <script src="assets/js/vendor/modernizr-3.5.0.min.js"></script>

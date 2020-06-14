@@ -20,6 +20,7 @@ class CreateSettingsTable extends Migration
             $table->string('meta_description')->nullable();
             $table->unsignedBigInteger('favicon')->nullable();
             $table->unsignedBigInteger('logo')->nullable();
+            $table->unsignedBigInteger('logo_2')->nullable();
             $table->unsignedBigInteger('banner')->nullable();
             $table->smallInteger('flag_slider')->default(0);
             $table->smallInteger('flag_service')->default(0);

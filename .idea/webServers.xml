@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="b9af45a4-11b5-4227-8dee-0632a3969695" name="renan">
+        <fileTransfer rootFolder="/var/www/sumowarna" accessType="SFTP" host="sumowarna.id" port="22" sshConfigId="ca10e9a5-95db-465f-9e55-15a635a73bb1" sshConfig="root@sumowarna.id:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
